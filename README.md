@@ -10,10 +10,37 @@ This repository contains small scripts which can help you create and manage your
 
 I used these scripts to fill the gaps that I saw in docker CLI just for myself. They helped me managing my docker swarms on multiple hosts. 
 
+### Dependency
+
+#### Scripts
+ - Bash
+ - Docker
+ - curl
+#### CD 
+ - Zulip
+ - Nexus
+ - Docker Hub
+
 ### Usage
 
-I hope script names are descriptive enough, but some scripts has comment lines inside which describes purpose and usage. So you should consider having a look at the contents of the scripts before using them.
+#### Deployment Scripts
+ - docker-service-deploy.sh
+ - docker-service-update-or-create.sh
 
-Please feel free to customize or improve them and if you wish send me a merge reuqest.
 
-Hope they also help you :)
+#### Service Scripts
+ - docker-service-restart.sh
+ - docker-prune-unused-all.sh
+ - docker-service-update-envs.sh
+ - mystack
+
+#### Monitoring Scripts
+ - docker-watch-errors-container.sh
+ - docker-watch-service-list.sh
+ - docker-list-all-containers.sh
+ - docker-list-all-ports.sh
+
+#### Maintenance Scripts
+ - docker-clear-container-logs.sh
+
+
