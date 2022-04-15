@@ -5,7 +5,7 @@
 set -e # EXIT ON FIRST ERROR
 set -x # ENABLE DEBUG
 
-SERVICE_NAME=$1
+SERVICE_NAME=$1 # from docker-service-deploy.sh
 
 SERVICE_ID=$(docker service ls --filter name=${SERVICE_NAME} --quiet) # there may be problems with partial servicename matching
 #SERVICE_ID=$(docker service ls | grep ${SERVICE_NAME} | cut -f1 -d' ') # lets docker image name to match in image urls, so that old style service names are kept

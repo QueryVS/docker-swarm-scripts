@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# restart your service COMMAND service-name
 SECONDSTOABORT=5
 SECONDSTOWAIT=10
 SRVNAME=${1}

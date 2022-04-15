@@ -22,6 +22,8 @@
 set -e # EXIT ON FIRST ERROR
 
 # REF: https://gist.github.com/Ksisu/385497d9b75eb58b6987ef7831070c50
+
+
 function zulipSend {
   echo "dummy_zulipsend"
   curl  -s -X POST ${ZULIP_MESSAGES_API} \
@@ -49,11 +51,12 @@ ME_ABS     : ${ME_ABS}
 ###########################################
 "
 
-ZULIP_MESSAGES_API="https://meet.MYDOMAIN.app/api/v1/messages"
-ZULIP_BOT_EMAIL_ADDRESS="devops-bot@meet.MYDOMAIN.app"
-ZULIP_BOT_API_KEY="c8bF3oFpLMW5QAtvxSOXn9gsL6j27VJW"
-ZULIP_STREAM="DevOps"
-ZULIP_DEBUGGER_EMAIL="debug@MYDOMAIN.app"
+############################################
+# Settings for CI/CD
+source docker-service-deploy.sh.settings # look this file
+# get custom variables from docker-service-deploy.sh.settings
+############################################
+
 HUB_URL="hub.MYDOMAIN.app/MYAPP"; VERSION="3.0"
 SERVICE_NAME_INIT="cosmos-"
 SERVICE_NAME_TEST_INIT="test_"

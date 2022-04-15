@@ -16,8 +16,12 @@ DOCKER_UPDATE_OPTIONS="--with-registry-auth=true"
 ENV_EMAIL_ACTIVE="EMAIL_ACTIVE=true"
 ENV_SMTP_SENDER_NAME="SMTP_SENDER_NAME=CUSTOM-Alert-${HOSTNAME}"
 
+#####################################
+# run from docker-service-deploy.sh
 SERVICE_NAME=$1
 IMAGE_URL=$2
+#####################################
+
 IMAGE_URL_NOVERSION="$(echo $IMAGE_URL | cut -d: -f1):" # ':' prevents partial image-name matching
 
 # Prevent partial servicename matching: different branch tags match with other branches service names, so a service may update from another branch image
